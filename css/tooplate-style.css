@@ -1,0 +1,1700 @@
+/*
+
+Tooplate 2115 Marvel
+
+https://www.tooplate.com/view/2115-marvel
+
+*/
+
+
+@import url("https://fonts.googleapis.com/css?family=Maven+Pro:400,700");
+body {
+  font-family: "Maven Pro", sans-serif;
+  padding-top: 70px;
+}
+
+.full-screen {
+  padding: 8rem 0;
+}
+
+.small-text {
+  color: #5b5b5b;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 50px;
+  letter-spacing: 0.2px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}
+
+a {
+  font-weight: normal;
+  text-decoration: none !important;
+  transition: all 0.4s ease;
+}
+a:hover {
+  color: #ffc200 !important;
+}
+
+.navbar-brand .uil {
+  font-size: 40px;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #5b5b5b;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+
+h1 {
+  color: #212121;
+  font-size: 2.8em;
+  margin: 24px 0;
+}
+
+h2 {
+  color: #353535;
+  font-size: 2.4em;
+  font-weight: bold;
+}
+
+h3 {
+  color: #484848;
+}
+
+h3,
+b, strong {
+  font-weight: bold;
+}
+
+.custom-btn {
+  background: #eee;
+  color: #5b5b5b;
+  font-weight: bold;
+  border-radius: 50px;
+  padding: 13px 29px;
+  font-size: 14px;
+  line-height: normal;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+.custom-btn:hover {
+  color: #ffc200;
+}
+.custom-btn.custom-btn-bg {
+  background: #474559;
+  color: #ffffff;
+}
+.custom-btn.custom-btn-bg:hover {
+  background: #ffc200;
+  color: #ffffff !important;
+}
+
+.animated {
+  position: relative;
+}
+
+.animated-info {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 5px;
+  min-width: 260px;
+  position: relative;
+}
+
+.animated-item {
+  color: #ffc200;
+}
+
+.animated-item {
+  font-size: 38px;
+  line-height: inherit;
+  display: block;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  animation: BottomTotop 6s linear infinite 0s;
+}
+.animated-item:nth-child(2n+2) {
+  animation-delay: 2s;
+}
+.animated-item:nth-child(3n+3) {
+  animation-delay: 4s;
+}
+
+@keyframes BottomTotop {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  30% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999999;
+  will-change: transform;
+  transition: transform 200ms linear;
+}
+.navbar[class*="-unpinned"] {
+  transform: translate(0, -150%);
+}
+.navbar[class*="-pinned"] {
+  transform: translate(0, 0);
+}
+.navbar[class*="headroom--not-top"] {
+  background: #ffffff;
+  border-bottom: 1px solid #f0f0f0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.navbar-expand-sm .navbar-nav .nav-link {
+  padding: 0 20px;
+}
+
+.nav-link {
+  font-weight: bold;
+  font-size: 16px;
+  overflow: hidden;
+}
+.nav-link span {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+.nav-link span:before {
+  position: absolute;
+  top: 100%;
+  content: attr(data-hover);
+  transform: translate3d(0, 0, 0);
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #ffc200;
+  font-weight: bold;
+}
+.navbar-light .navbar-nav .nav-link:focus span,
+.navbar-light .navbar-nav .nav-link:hover span {
+  transform: translateY(-100%);
+}
+
+.navbar-light .navbar-toggler-icon {
+  background: none;
+}
+
+.navbar-toggler {
+  border: 0;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  outline: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.navbar-toggler:focus {
+  outline: none;
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:first-child {
+  transform: rotate(45deg);
+  top: 6px;
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:nth-child(2) {
+  display: none;
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:last-child {
+  transform: rotate(-45deg);
+  bottom: 1px;
+}
+.navbar-toggler .navbar-toggler-icon {
+  background: #212121;
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: 5px 0;
+  transition: all 0.4s ease;
+  position: relative;
+
+
+
+
+
+
+  background-image: none;          /* Remove default background */
+  background-color: #212121;         /* Set background to white */
+  border: 1px solid #212121;         /* Optional: Add border for better visibility */
+  width: 30px;
+  height: 3px;
+  display: block;
+  margin: 5px 0;
+}
+
+.copyright-text {
+  font-size: 16px;
+  font-weight: normal;
+  display: block;
+}
+
+.color-mode {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.color-mode-icon {
+  position: relative;
+  right: 6px;
+}
+.color-mode-icon:after {
+  font-family: 'unicons';
+  content: '\ea9f';
+  font-size: 30px;
+  font-weight: 300;
+  font-style: normal;
+}
+.color-mode-icon.active:after {
+  font-family: 'unicons';
+  content: '\eb65';
+  font-size: 30px;
+  color: #ffffff;
+}
+
+.dark-mode {
+  background: #0c0c0d;
+}
+.dark-mode .navbar-light .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.8);
+}
+.dark-mode .navbar-light .navbar-nav .nav-link:hover {
+  color: #ffc200;
+}
+
+.dark-mode i:hover, .dark-mode a:hover{
+  color: #ffc200;
+}
+
+
+
+
+
+.dark-mode .navbar-toggler-icon {
+  background-image: none;          /* Remove default background */
+  background-color: white;         /* Set background to white */
+  border: 1px solid white;         /* Optional: Add border for better visibility */
+  width: 30px;
+  height: 3px;
+  display: block;
+  margin: 5px 0;
+}
+
+
+
+.dark-mode .navbar-collapse {
+  background-color: #000000;   /* Set background to black */
+}
+
+
+
+
+
+.dark-mode .navbar[class*="headroom--not-top"] {
+  background: #0c0c0d;
+  border-bottom: 1px solid #1f1f1f;
+}
+
+.dark-mode .project-card{
+  background-color: #5b5b5b;
+}
+
+.dark-mode .resume-cardd{
+  background-color: #5b5b5b;
+}
+
+.dark-mode .modal-content{
+  background-color: #5b5b5b;
+  
+}
+
+.dark-mode .small-text {
+  background: #0d0c15;
+  color: #ffffff;
+}
+
+.dark-mode #projectFeatures li {
+  color: #ffffff;
+}
+.dark-mode .feature-card .uil,
+.dark-mode .navbar-light .navbar-brand,
+.dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6, .dark-mode p, .dark-mode li,.dark-mode i,
+.dark-mode .color-mode {
+  color: #ffffff;
+}
+.dark-mode .owl-carousel .owl-nav button.owl-next,
+.dark-mode .owl-carousel .owl-nav button.owl-prev,
+.dark-mode .owl-carousel button.owl-dot {
+  color: #ffffff;
+}
+
+.timeline-wrapper {
+  position: relative;
+  padding: 22px 0;
+}
+.timeline-wrapper:last-child:before {
+  height: 0;
+}
+.timeline-wrapper:before {
+  content: "";
+  background: #474559;
+  width: 3px;
+  height: 100%;
+  position: absolute;
+  left: 38px;
+}
+
+.timeline-yr {
+  background: #474559;
+  border-radius: 100%;
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  line-height: 75px;
+  text-align: center;
+}
+.timeline-yr span {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  line-height: 75px;
+}
+
+.timeline-info {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 432px;
+  margin-left: 6em;
+}
+.timeline-info small {
+  color: #474559;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 15px;
+}
+
+.owl-carousel .owl-nav span {
+  display: none;
+}
+.owl-carousel .owl-nav .owl-prev:before,
+.owl-carousel .owl-nav .owl-next:before {
+  background: none;
+  padding: 0;
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-family: 'unicons';
+  font-size: 100px;
+  line-height: normal;
+}
+.owl-carousel .owl-nav .owl-prev:before {
+  content: '\e833';
+  left: -45px;
+}
+.owl-carousel .owl-nav .owl-next:before {
+  content: '\e836';
+  right: -45px;
+}
+
+.owl-theme .owl-nav [class*=owl-] {
+  background: none;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+}
+.owl-theme .owl-nav [class*=owl-]:hover {
+  color: #ffc200;
+}
+.owl-theme .owl-dots .owl-dot {
+  outline: none;
+}
+.owl-theme .owl-dots .owl-dot span {
+  width: 8px;
+  height: 8px;
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: #5b5b5b;
+}
+
+.google-map iframe {
+  width: 100%;
+}
+
+.contact-form {
+  position: relative;
+}
+.contact-form .form-control {
+  background: transparent;
+  border-radius: 2px;
+  outline: none;
+  box-shadow: none;
+  font-weight: bold;
+  margin: 16px 0;
+}
+.contact-form .form-control:not(textarea) {
+  height: 48px;
+}
+.contact-form .form-control:hover, .contact-form .form-control:focus {
+  border-color: #ffc200;
+}
+.contact-form .submit-btn {
+  background: #ffc200;
+  border-radius: 50px;
+  color: #ffffff;
+  font-weight: bold;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.contact-form .submit-btn:hover {
+  background: #474559;
+}
+
+.contact-info {
+  background: #474559;
+  border-radius: 0 0 3px 3px;
+  position: relative;
+  bottom: 8px;
+}
+.contact-info p, .contact-info a {
+  color: #f7f3f3;
+}
+
+.social-links .uil {
+  color: #f7f3f3;
+  font-size: 20px;
+  display: block;
+  margin: 5px 0;
+}
+.social-links .uil:hover {
+  color: #ffc200;
+}
+
+@media (min-width: 1270px) {
+  .owl-theme .owl-dots {
+    position: relative;
+    bottom: 50px;
+  }
+}
+@media (max-width: 991px) {
+  .full-screen {
+    padding-bottom: 4rem;
+  }
+
+  /* .color-mode {
+    display: none;
+  } */
+
+  .about-image {
+    margin-top: 4em;
+  }
+
+  .mobile-mt-2,
+  .contact-form {
+    margin-top: 2em;
+  }
+
+  .contact-info {
+    padding: 0 2rem;
+  }
+}
+@media (max-width: 767px) {
+  h1 {
+    font-size: 2.4em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  .animated-item {
+    font-size: 28px;
+  }
+
+  .navbar-collapse {
+    background: #ffffff;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  .navbar-expand-sm .navbar-nav .nav-link {
+    padding: 3px 20px;
+  }
+}
+@media (max-width: 580px) {
+	.animated-info {
+		min-width: 200px;
+	}
+  .animated-item {
+    font-size: 30px;
+  }
+
+  .custom-btn-group {
+    text-align: center;
+  }
+
+  .custom-btn {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .owl-theme .owl-nav {
+    display: none;
+  }
+
+  .timeline-info small {
+    display: block;
+    margin: 10px 0 0 0;
+  }
+}
+@media (max-width: 320px) {
+  .animated-text {
+    margin-top: 0;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .full-screen {
+    padding: 4rem 0;
+  }
+
+  .mobile-block {
+    display: block;
+  }
+
+  .contact-info {
+    flex-direction: column;
+  }
+
+  .social-links li {
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+
+
+
+
+/* .new{
+
+  display: flex;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Style for project cards */
+.project-card {
+  position: relative;
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+.project-card-wrapper {
+  height: 350px; /* Set a fixed height for the card */
+  display: flex;
+  align-items: stretch; /* Ensure full height for child elements */
+  margin-bottom: 40px;
+}
+
+.project-card {
+  height: 100%; /* Make the project card take the full height */
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover; /* Ensures the image covers the card without distortion */
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Overlay style */
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+
+
+
+
+
+.overlay h3,
+.overlay p {
+  color: #fff; /* Set the text color to white for better visibility */
+}
+
+
+
+
+
+
+
+
+
+
+
+.project-card:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h3, .overlay p {
+  margin: 10px 0;
+}
+
+.overlay a {
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.overlay a:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Project card styles */
+.project-card {
+  border: 2px solid #ffc200; /* Light border */
+ 
+  padding: 40px; /* Padding to separate content from the card */
+  position: relative; /* To position the overlay */
+}
+
+/* Image styles */
+/* Image styles */
+.project-image {
+  display: block; /* Ensure the image is a block element */
+  width: 100%; /* Make image responsive */
+  height: auto; /* Maintain aspect ratio */
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.9); /* Default shadow (black in light mode) */
+}
+
+/* Dark mode */
+
+ .dark-mode .project-image {
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.9); /* White shadow in dark mode */
+  }
+
+
+
+/* Overlay styles */
+.overlay {
+  position: absolute; /* Position overlay absolutely */
+  top: 0; /* Align to top */
+  left: 0; /* Align to left */
+  right: 0; /* Align to right */
+  bottom: 0; /* Align to bottom */
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: #fff; /* White text */
+  display: flex; /* Use flexbox for alignment */
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center items */
+  justify-content: center; /* Center items */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease-in-out; /* Fade effect */
+}
+
+/* Show overlay on hover */
+.project-card:hover .overlay {
+  opacity: 1; /* Show overlay on hover */
+}
+
+
+
+
+/* Modal styles */
+
+/* Modal styles */
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  padding-left: 60px;
+  border-radius: 8px;
+  text-align: left;
+  position: relative;
+  max-width: 75vw; /* Increased width to 80% of the viewport width */
+  width: 100%;
+  max-height: 80vh; /* Limit the height of the modal */
+  overflow-y: auto; /* Enable vertical scrolling when content overflows */
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+
+
+
+
+
+
+
+
+/* Styles for the modal content */
+.modal-content {
+  width: 80%;
+  margin: auto;
+  background-color: #fff;
+  padding: 60px;
+  border-radius: 10px;
+  position: relative;
+}
+
+
+
+
+
+
+
+/* Style the modal content */
+.modal-content {
+  position: relative;
+  padding: 60px;
+  background-color: white;
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: auto;
+  
+}
+
+
+@media (max-width: 580px) {
+  .modal-content {
+    padding: 20px;
+  }
+  
+}
+
+
+
+
+/* Style the close button */
+.modal-content .close {
+  font-size: 37px;       /* Enlarge the X icon */
+  color: red;            /* Change color to red */
+  margin-right: 20px;    /* Push it left by adding right margin */
+  cursor: pointer;       /* Make it clickable */
+  position: absolute;    /* Position it absolutely in the modal */
+  top: 10px;             /* Adjust top positioning */
+  right: 10px;           /* Ensure it aligns properly to the right */
+}
+
+
+
+/* Reduce the size of the image and center it */
+#projectImage {
+  max-width: 70%; /* Reduce the width of the image */
+  height: auto; /* Keep aspect ratio */
+  margin: 20px auto; /* Add space around the image */
+  display: block; /* Center the image */
+}
+
+
+
+
+
+
+
+
+
+
+/* Carousel Container with Arrows */
+.carousel-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 400px;
+}
+
+/* Style for previous/next buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 10px;
+  color: white;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  transform: translateY(-50%);
+  border-radius: 4px;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s, transform 0.3s;
+  
+}
+
+
+/* Hover effect on carousel container */
+.carousel-container:hover .prev,
+.carousel-container:hover .next {
+  opacity: 1; /* Show arrows when hovered */
+  transform: translateY(-50%) scale(1.1); /* Slight scale-up on hover */
+}
+
+/* Optional additional hover effects */
+.prev:hover, .next:hover {
+ background-color: #ffc200; /* Light blue background */
+  color: white; /* Ensure text color remains white */
+
+
+  
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Hide arrows by default and show them when multiple images are present */
+.carousel-container .prev, .carousel-container .next {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+/* Responsive media queries for smaller screens */
+@media (max-width: 768px) {
+  /* Reduce arrow size on tablets */
+  .prev, .next {
+    font-size: 5px;
+    padding: 8px;
+  }
+
+
+  .prev {
+    left: 4px;
+  }
+  
+  .next {
+    right: 4px;
+  }
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1020px ) {
+  /* Reduce arrow size on tablets */
+  .prev, .next {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+
+  .prev {
+    left: 4px;
+  }
+  
+  .next {
+    right: 4px;
+  }
+}
+
+
+
+
+
+
+
+
+
+#projectFeatures {
+  list-style: none; /* Remove default bullets */
+  padding-left: 70px;
+}
+
+#projectFeatures li {
+  position: relative;
+  padding-left: 20px; /* Space for custom bullet */
+  margin-bottom: 10px;
+ 
+  font-size: 16px;
+  color: #333; /* Customize text color */
+}
+
+#projectFeatures li::before {
+  content: "\2022"; /* Unicode for a bullet */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #007bff; /* Custom bullet color */
+  font-size: 20px; /* Custom bullet size */
+  line-height: 16px;
+}
+
+/* You can add hover effects or more styling if needed */
+
+
+
+
+.modal-content img{
+  margin: 25px;
+ 
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Default state for the cards (hidden by default) */
+/* Default state for the cards (hidden by default) */
+.project-card-wrapper {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* When card is in view (shown) */
+.project-card-wrapper.show-on-scroll {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+
+
+/* About Section */
+.about-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* Skills fly-in animation */
+@keyframes flyIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100px) rotate(20deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(0);
+  }
+}
+
+/* Skills fly-out animation */
+@keyframes flyOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0) rotate(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px) rotate(-20deg);
+  }
+}
+
+.skill-logo {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Ensure smooth transition */
+  will-change: transform; /* Optimize performance */
+}
+
+/* Fly-in animation */
+.skill-visible {
+  animation: flyIn 1s ease forwards;
+}
+
+/* Fly-out animation */
+.skill-hidden {
+  animation: flyOut 0.8s ease forwards;
+}
+
+/* Hover effect */
+.skill-logo:hover {
+  transform: scale(1.5); /* Enlarge the logo slightly */
+  opacity: 1; /* Ensure it remains visible on hover */
+}
+
+/* Ensure the hover effect still works after animation ends */
+.skill-visible:hover {
+  animation: none; /* Disable the ongoing fly-in animation on hover */
+  opacity: 1; /* Maintain visibility */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Section Styles */
+.education-section, .experience-section {
+  
+  padding: 60px 0;
+}
+
+/* Resume Card Styling */
+.resume-card {
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.resume-card:hover {
+  transform: translateY(-10px);
+}
+
+.card-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Intuitive Coursework Section */
+.coursework-section {
+  margin-top: 20px;
+}
+
+.coursework-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.course-tag {
+  background-color: #007bff;
+  color: white;
+  border-radius: 20px;
+  padding: 8px 15px;
+  margin: 5px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.course-tag:hover {
+  background-color: #0056b3;
+}
+
+/* Responsibilities List */
+.responsibilities-section {
+  margin-top: 20px;
+}
+
+.responsibilities-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.responsibilities-list li {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+/* Card Hover Effect */
+.resume-card:hover .course-tag {
+  transform: translateY(-5px);
+  transition: transform 0.2s ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Section Styling */
+.education-section, .experience-section {
+  padding: 60px 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: left; /* Align title to the left */
+}
+
+/* Resume Card Styling */
+.resume-card {
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: left; /* Ensure text is aligned to the left */
+  padding: 20px;
+}
+
+h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Coursework Section */
+.coursework-section {
+  margin-top: 20px;
+}
+
+.coursework-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+
+
+
+/* Base styling for course tags */
+.course-tag {
+  display: inline-block; /* Display as inline block for proper spacing */
+  background-color: #f2f2f2; /* Light gray background */
+  color: #333; /* Dark text for contrast */
+  padding: 10px 15px; /* Add padding for space */
+  margin: 5px; /* Margin between the tags */
+  border: 1px solid #ccc; /* Light border */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: 20px;
+}
+
+/* Hover effect */
+.course-tag:hover {
+  background-color: #d4b886; /* Light grayish gold */
+  color: #fff; /* White text on hover */
+  border-color: #d4b886; /* Match border with background on hover */
+}
+
+
+
+/* Responsibilities Section */
+.responsibilities-section {
+  margin-top: 20px;
+}
+
+.responsibilities-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.responsibilities-list li {
+  margin-bottom: 10px;
+}
+
+/* Hover Effect for Cards */
+.resume-card:hover {
+  transform: translateY(-5px);
+}
+
+
+
+
+
+
+
+
+
+/* Normal card styling */
+.resume-card {
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Ensure smooth shadow transition */
+  text-align: left;
+  padding: 20px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Hover effect - change shadow color */
+.resume-card:hover {
+  box-shadow: 0 5px 15px rgba(100, 150, 255, 0.6); /* Soft blue shadow on hover */
+  transform: translateY(-5px); /* Lift the card slightly for an interactive feel */
+}
+
+.resume-cardd:hover {
+  box-shadow: 0 5px 15px #ffc200 /* Soft blue shadow on hover */
+  
+}
+
+
+
+
+
+
+
+
+.contact-link {
+  font-size: 1.2rem;
+  color: #333;
+  text-decoration: none;
+}
+
+.contact-link i {
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+.social-icon {
+  margin: 0 15px;
+  font-size: 2rem;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #0077b5; /* Adjust color on hover, like LinkedIn blue */
+}
+
+.email, .social-links {
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Default: 6 items per row for medium and larger screens */
+.skill-item {
+  width: 16.66%; /* 100% / 6 = 16.66% */
+}
+
+/* For small screens: 3 items per row */
+@media (max-width: 768px) {
+  .skill-item {
+    width: 33.33%; /* 100% / 3 = 33.33% */
+  }
+}
+
+/* For extra small screens (below 576px): 2 items per row */
+@media (max-width: 576px) {
+  .skill-item {
+    width: 50%; /* 100% / 2 = 50% */
+  }
+}
+
+
+
+
+
+
+
+
+/* Image border and creative shape */
+/* Image border and modern shape */
+/* Image border and modern smooth shape */
+/* Image border with futuristic, dynamic shape */
+
+
+
+
+
+
+
+
+
+
+
+
+/* Image border and creative shape */
+.creative-image {
+  border-radius: 50% 20% / 10% 40%; /* Custom curve to make it unique */
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  border: 5px solid #fff; /* White border around the image */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+
+
+/* Hover effect for image */
+.creative-image:hover {
+  transform:rotate(3deg) scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+  border-color: #f5d76e;
+}
+
+
+/* Add gap between image and text */
+.about-image {
+  margin-right: 120px; /* Adjust the gap as needed */
+}
+
+/* Spacing between image and about text for smaller screens */
+@media (max-width: 991.5px) {
+    .about-image {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+/* Prevent image from enlarging for screens below 1000px */
+@media (max-width: 991.5px) {
+  .creative-image {
+      max-width: 45vh; /* Keep the image width relative to its container */
+      height: auto; /* Maintain aspect ratio */
+     
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Overlay styles */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* Slightly darker for better contrast */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Show overlay on hover */
+.project-card:hover .overlay {
+  opacity: 1;
+}
+
+/* Specific button style for project cards */
+/* Specific button style for project cards */
+.project-card .btn-info {
+  background: linear-gradient(90deg, #d1d1d1 0%, #b3b3b3 100%); /* Lighter gradient from light gray to medium gray */
+  border-color: #b3b3b3; /* Match border to the darker part of the gradient */
+  color: #fff; /* Keep text white */
+  transition: background-color 0.5 ease, border-color 0.5 ease; /* Slower transition for background and border */
+}
+
+/* Hover effect for button */
+.project-card .btn-info:hover {
+  background: linear-gradient(90deg, #ffcc00 0%, #ff9900 100%); /* Bright gradient from soft gold to darker gold */
+  border-color: #ff9900; /* Match border to the darker part of the gradient */
+  color: #fff !important; /* Keep text white */
+}
+
+
+
+
+
+
+
+
+.blinking-arrow {
+  display: inline-block;
+  margin-left: 5px;
+  animation: blink 1s infinite;
+  font-size: 1.2em; /* Adjust the size as per your preference */
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
